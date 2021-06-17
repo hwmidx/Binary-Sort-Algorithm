@@ -1,6 +1,6 @@
 //bubble sort
 #include <iostream>
-using namespac std;
+using namespace std;
 
 
 void sort(int [], int);
