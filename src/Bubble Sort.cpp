@@ -7,7 +7,7 @@ void sort(int [], int);
 main()
 {
 	const int size = 6; 
-	int a[size] = {9,5,3,1,7,4};
+	int a[size] = {9,5,3,1,7,4};    //Sort (9  5  3  1  7  4)
 
 	sort(a,size);
 	for(int i=0; i<size; i++)
