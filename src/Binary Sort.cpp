@@ -5,7 +5,7 @@
 using namespace std;
 
 int Binary_Search (const int [], int , int , int , int);   //Function Prototype..
-void Print(const int b[] , int low , int mid , int hight , int size);
+void Print(const int [] , int  , int , int , int );
 
 main()
 {
