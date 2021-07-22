@@ -1,4 +1,5 @@
 //Binary Search of an array
+//Git Hub Amoo-Srwsh
 
 #include <iostream>
 #include <iomanip>
