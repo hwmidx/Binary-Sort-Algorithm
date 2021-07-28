@@ -5,7 +5,6 @@
 using namespace std;
 
 int binarySearch(const int[], int, int);
-
 int main(){
    const int size = 7;
    int userInput;
