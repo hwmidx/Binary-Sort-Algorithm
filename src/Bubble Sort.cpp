@@ -17,12 +17,11 @@ int main(){
 void bubbleSort(int num[], int len){
     int temp;
     for (int p = len - 1; 0 < p; p--)
-        for (int j = 0; j < len; j++){
+        for (int j = 0; j < len; j++)
             if (num[j] > num[j + 1])
             {
                 temp = num[j];
                 num[j] = num[j + 1];
                 num[j + 1] = temp;
             }
-		}
 }
