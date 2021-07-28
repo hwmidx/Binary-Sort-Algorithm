@@ -1,71 +1,42 @@
-//Binary Search of an array
-//Git Hub Amoo-Srwsh
+//Binary-Search of an array
+//Github Amoo-Srwsh And hwmidx
 
 #include <iostream>
-#include <iomanip>
 using namespace std;
 
-int Binary_Search (const int [], int , int , int , int);   //Function Prototype..
-void Print(const int [] , int  , int , int , int );
+int binarySearch(const int[], int, int);
 
-main()
-{
-	const int size = 7;
-	int a[size] = {11,22,35,44,49,88,91};
-	int User_Input;
+int main(){
+   const int size = 7;
+   int userInput;
+   int number[size] = {11, 22, 35, 44, 49, 88, 91};
 
-	for(int i=0; i<size; i++)        //Print array index number..
-	   cout<<a[i]<<"  ";
+   for (int i = 0; i < size; i++) //Print array...
+      cout << " " << number[i] << "\t";
 
-    cout<<"\n Enter a Number :";
-    cin>>User_Input;
-    cout<<"\n\n";
+   cout << "\n Enter a number to search : ";
+   cin >> userInput;
+   cout << "\n\n";
 
-    for(int j=0; j<size; j++)
-       cout<<setw(3)<<j<<" ";
-
-    cout<<"\n";
-
-    for(int k=0; k<=4*size; k++)
-       cout<<"_";
-
-    cout<<"\n";
-
-    int r = Binary_Search(a,User_Input,0,size-1,size);
-
-    if(r != -1)
-      cout<<"Found Number On Element :"<<r<<endl;
-    else
-      cout<<"\n"<<"Not Found"<<endl;
+   int result = binarySearch(number, size, userInput);
+   if (result != -1)
+      cout << "Found Number : " << userInput << endl;
+   else
+      cout << "\nNot Found" << endl;
+   return 0;
 }
 
-int Binary_Search(const int array[], int User_Input , int low , int hight , int size)
-{
-	int middle;  
-	while(low <= hight)
-	{
-        middle = (low + hight) /2;
-        Print(array,low,middle,hight,size);
-        if(User_Input == array[middle])
-           return middle;
-        else if (User_Input < array[middle])
-           hight = middle - 1;
-        else
-           low = middle + 1;
-	}
-	return -1;
-}
-
-void Print(const int array[] , int low , int middle , int hight , int size)
-{
-	for(int m=0; m<size; m++)
-	   if(m < low || m > hight)
-	     cout<<"   ";
-	   else
-	      if(m == middle)
-	      	cout<<setw(3)<<array[m]<<"*";
-	      else
-	      	cout<<setw(3)<<array[m]<<" ";
-
-	cout<<"\n";
+int binarySearch(const int array[], int len, int userInput){
+   int low = 0, middle, high = len - 1;
+   while (low <= high)
+   {
+      middle = (low + high) / 2;
+      if (userInput == array[middle])
+         return middle;
+      else if (userInput < array[middle])
+         high = middle - 1;
+      else
+         low = middle + 1;
+   }
+   return -1;
 }
