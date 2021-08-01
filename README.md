@@ -1,3 +1,4 @@
+# Binary Search
 Step 1:
 
 Bubble-Sort<br>
